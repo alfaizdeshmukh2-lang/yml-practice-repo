@@ -1,0 +1,30 @@
+name: CICD
+
+on:
+  workflow_dispatch:
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "checkout code"
+        run: echo "checking code"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Build code in docker container"
+        run: docker --version
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Testing a code"
+        run: echo "testing a container"
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: " Deploying application"
+        run: echo "Deploying the application All process Are successfull"
+
+
+      
