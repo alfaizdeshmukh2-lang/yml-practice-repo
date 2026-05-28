@@ -18,3 +18,13 @@ jobs:
     steps:
       - name: showthe version of python & Docker
         run: docker --version && python --version
+
+  Date_time:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Date
+        run: $DATE
+
+      - name: time
+        run: $Time
+      
