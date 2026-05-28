@@ -1,0 +1,15 @@
+name: Alfaiz Deshmukh 
+
+on:
+  push:
+    branches: [main]
+
+jobs:  
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello to freinds 
+        run: echo "heloo dosto"
+  
+      - name: Say Hello to username 
+        run: echo "Hello $USER"
