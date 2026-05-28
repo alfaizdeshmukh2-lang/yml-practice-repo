@@ -22,8 +22,8 @@ jobs:
   Date_time:
     runs-on: ubuntu-latest
     steps:
-      - name: time
-        run: echo "Current time is $(time)"
+      - name: show current time
+        run: date
 
       - name: date
         run: echo "Current Date & Time is $(date)"
