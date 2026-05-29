@@ -10,17 +10,20 @@ jobs:
       - name: "checkout code"
         run: echo "checking code"
   build:
+    needs: [code]
     runs-on: ubuntu-latest
     steps:
       - name: "Build code in docker container"
         run: docker --version
   test:
+    needs: [code, build]
     runs-on: ubuntu-latest
     steps:
       - name: "Testing a code"
         run: echo "testing a container"
 
   deploy:
+    needs: [code, build, test]
     runs-on: ubuntu-latest
     steps:
       - name: " Deploying application"
