@@ -2,6 +2,14 @@ name: CICD
 
 on:
   workflow_dispatch:
+    inputs:
+      environment:
+        description: This is a environments where we can deploy workflow 
+        type: choice
+        options:
+          - dev
+          - main
+          - stage
 
 jobs:
   code:
